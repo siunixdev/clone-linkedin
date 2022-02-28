@@ -1,0 +1,27 @@
+.header
+  @apply bg-white py-1
+
+  &__container
+    @apply flex justify-between container mx-auto max-w-6xl
+
+  &__left
+    @apply flex items-center
+
+    > img
+    @apply w-12 object-cover
+
+  &__right
+    @apply flex items-center
+
+  &__search
+    @apply relative mt-1 p-1
+
+  &__option
+    @apply flex flex-col justify-center items-center text-xs mr-4 text-gray-500 hover:text-black hover:border-b-2 border-black py-1 w-20
+
+.search
+  &__icon
+    @apply flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none
+
+  &__input
+    @apply bg-slate-100 text-gray-700 text-sm rounded-sm pl-10 p-2
