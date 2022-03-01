@@ -1,0 +1,32 @@
+.sidebar
+  @apply col-span-12 md:col-span-4 lg:col-span-3  min-h-screen
+  &__profile
+    @apply flex flex-col justify-center items-center text-center bg-white rounded-xl pt-8 border mb-4
+  &__recent
+    @apply flex flex-col text-left bg-white rounded-xl py-4 border mb-4
+
+.profile
+  &__name
+    @apply font-bold mt-4
+  &__job_title
+    @apply text-sm font-light text-gray-700 mb-4
+  &__view
+    @apply my-4 w-full text-left text-sm font-bold
+    &__menu
+      @apply flex justify-between px-4 py-2 hover:bg-gray-200 text-gray-600
+  &__count
+    @apply text-sky-600
+  &__bottom
+    @apply flex justify-between px-4 py-2 hover:bg-gray-200 text-gray-600
+
+.recent
+  &__title
+    @apply text-sm pl-4 mb-2
+  &__items
+    @apply text-sm font-medium
+
+.items
+  &__data
+    @apply flex px-4 hover:bg-gray-200 py-1
+    &__tag
+      @apply mr-2

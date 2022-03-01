@@ -5,11 +5,11 @@ function HeaderOption({ icon, title }) {
   return (
     <button className='header__option'>
       {icon && (
-        <div className='h-6 w-6'>
+        <div className='option__icon'>
           {icon}
         </div>
       )}
-      <span className='mt-1'>{title}</span>
+      <span className='option__text'>{title}</span>
     </button>
   )
 }

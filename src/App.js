@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.sass';
 import Header from './components/header/Header';
+import Sidebar from './components/sidebar/Sidebar';
+import Feed from './components/feed/Feed';
+import Widget from './components/wideget/Widget';
 
 function App() {
   return (
@@ -8,9 +11,11 @@ function App() {
       <Header />
 
       {/* App body */}
-      {/* Sidebar */}
-      {/* Feed */}
-      {/* Widgets */}
+      <div className='app__body'>
+        <Sidebar />
+        <Feed />
+        <Widget />
+      </div>
     </div>
   );
 }
