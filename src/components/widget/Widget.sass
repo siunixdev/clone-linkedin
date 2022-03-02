@@ -1,0 +1,22 @@
+.widget
+  @apply hidden lg:block lg:col-span-3 min-h-screen space-y-4
+  &__user-add
+    @apply p-4 space-y-4
+  &__footer
+    @apply flex justify-center items-center flex-wrap text-center text-xs text-gray-500 space-x-6
+    &__link
+      @apply hover:underline hover:text-blue-500
+
+.user-add
+  &__title
+    @apply text-sm font-bold text-gray-700
+  &__container
+    @apply flex space-x-2 mt-4
+  &__detail
+
+    @apply flex flex-col
+.detail
+  &__name
+    @apply text-sm font-bold
+  &__job
+    @apply text-xs text-gray-600

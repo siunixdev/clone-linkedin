@@ -1,2 +1,12 @@
 .feed
-  @apply col-span-12 md:col-span-8 lg:col-span-6 bg-slate-200
+  @apply col-span-12 md:col-span-8 lg:col-span-6 space-y-4
+  &__post
+    @apply flex justify-center text-center p-4
+
+.post
+  &__container
+    @apply w-full mx-2 text-sm text-gray-700 text-right
+  &__body
+    @apply bg-gray-100 rounded-xl p-4 w-full border border-gray-300 mb-3
+  &__bottom
+    @apply flex justify-between

@@ -3,9 +3,9 @@ import './App.sass';
 import Header from './components/header/Header';
 import Sidebar from './components/sidebar/Sidebar';
 import Feed from './components/feed/Feed';
-import Widget from './components/wideget/Widget';
+import Widget from './components/widget/Widget';
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Header />

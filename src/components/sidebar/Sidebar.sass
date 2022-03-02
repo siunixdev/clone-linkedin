@@ -1,9 +1,9 @@
 .sidebar
-  @apply col-span-12 md:col-span-4 lg:col-span-3  min-h-screen
+  @apply col-span-12 md:col-span-4 lg:col-span-3 min-h-screen space-y-4
   &__profile
-    @apply flex flex-col justify-center items-center text-center bg-white rounded-xl pt-8 border mb-4
+    @apply flex flex-col justify-center items-center text-center mt-4
   &__recent
-    @apply flex flex-col text-left bg-white rounded-xl py-4 border mb-4
+    @apply flex flex-col text-left my-4
 
 .profile
   &__name
@@ -27,6 +27,6 @@
 
 .items
   &__data
-    @apply flex px-4 hover:bg-gray-200 py-1
+    @apply flex px-4 hover:bg-gray-200 py-2
     &__tag
       @apply mr-2

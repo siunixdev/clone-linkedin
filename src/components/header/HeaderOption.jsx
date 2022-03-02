@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.sass'
 
-function HeaderOption({ icon, title }) {
+const HeaderOption = ({ icon, title }) => {
   return (
     <button className='header__option'>
       {icon && (
