@@ -32,7 +32,7 @@ var postButton = [
   },
 ]
 
-const Feed = () => {
+const Feed = ({ photoUrl }) => {
   return (
     <div className='feed'>
       <Card>
@@ -40,7 +40,7 @@ const Feed = () => {
           <Avatar
             height="h-12"
             width="w-12"
-            avatar="https://siunix.com/static/media/profile.390255c82888cc52aeb0.jpg"
+            avatar={photoUrl ? photoUrl : "/images/no-photo.png"}
           />
           <div className='post__container'>
             <textarea className='post__body' placeholder='Start a post' />
@@ -49,6 +49,7 @@ const Feed = () => {
                 {
                   postButton.map((button, i) => (
                     <Button
+                      key={i}
                       text={button.text}
                       type="btn--sm font-bold btn--secondary"
                       icon={button.icon}
@@ -62,13 +63,14 @@ const Feed = () => {
         </div>
       </Card>
       <div className='span'></div>
-      <Post
+      {/* <Post
         avatar="https://siunix.com/static/media/profile.390255c82888cc52aeb0.jpg"
         name="Abdillah F"
         jobTitle="Fullstack Developer"
         time="2h"
         feed="React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes."
-      />
+        image="/images/img.jpg"
+      /> */}
       <Post
         avatar="https://img.okezone.com/content/2022/01/06/54/2528261/tips-elon-musk-bagi-generasi-muda-yang-mau-sukses-zbgFoZhu0V.jpg"
         name="Elon Musk"

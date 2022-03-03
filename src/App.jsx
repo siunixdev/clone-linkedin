@@ -1,22 +1,21 @@
 import React from 'react';
 import './App.sass';
-import Header from './components/header/Header';
-import Sidebar from './components/sidebar/Sidebar';
-import Feed from './components/feed/Feed';
-import Widget from './components/widget/Widget';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
 
 const App = () => {
   return (
-    <div className="app">
-      <Header />
-
-      {/* App body */}
-      <div className='app__body'>
-        <Sidebar />
-        <Feed />
-        <Widget />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

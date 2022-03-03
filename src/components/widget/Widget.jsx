@@ -50,7 +50,7 @@ const Widget = () => {
           <span className='user-add__title'>Add to your feed</span>
           {
             addUsers.map((user, i) => (
-              <div className='user-add__container'>
+              <div className='user-add__container' key={i}>
                 <Avatar
                   height="h-14"
                   width="w-14"

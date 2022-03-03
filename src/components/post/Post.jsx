@@ -39,7 +39,7 @@ var shareButton = [
   },
 ]
 
-const Post = ({ avatar, name, jobTitle, time, feed }) => {
+const Post = ({ avatar, name, jobTitle, time, feed, image }) => {
   return (
     <Card>
       <div className='p-4 space-y-4'>
@@ -58,6 +58,7 @@ const Post = ({ avatar, name, jobTitle, time, feed }) => {
         <div className='text-sm'>
           {feed}
         </div>
+        <img src={image} className='w-full object-cover object-center' />
         <div className='span'></div>
         <div className='flex justify-between'>
           {

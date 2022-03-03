@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.sass'
 import Logo from './images/logo.svg'
 import IconSearch from './images/icon-search.svg'
 import HeaderOption from './HeaderOption'
 import Avatar from '../base/avatar/Avatar'
+import { useSelector } from 'react-redux'
 
 var menus = [
   {
@@ -48,7 +49,7 @@ var menus = [
   },
 ]
 
-const Header = () => {
+const Header = ({ user }) => {
 
   return (
     <div className='header'>
@@ -72,12 +73,12 @@ const Header = () => {
             ))
           }
           <HeaderOption
-            title="Abdillah F"
+            title="Me"
             icon={
               <Avatar
                 height="h-6"
                 width="w-6"
-                avatar="https://siunix.com/static/media/profile.390255c82888cc52aeb0.jpg"
+                avatar={user && user.photoUrl ? user.photoUrl : "/images/no-photo.png"}
               />
             }
           />

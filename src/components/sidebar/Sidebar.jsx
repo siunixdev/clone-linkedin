@@ -7,7 +7,7 @@ var recents = [
   "ReactJs", "ExpressJs", "TailwindCSS", "Developer", "Working"
 ]
 
-const Sidebar = () => {
+const Sidebar = ({ user }) => {
   return (
     <div className='sidebar'>
       <Card>
@@ -15,13 +15,13 @@ const Sidebar = () => {
           <Avatar
             height="h-20"
             width="w-20"
-            avatar="https://siunix.com/static/media/profile.390255c82888cc52aeb0.jpg"
+            avatar={user && user.photoUrl ? user.photoUrl : "/images/no-photo.png"}
           />
           <span className='profile__name h'>
-            Abdillah F
+            {user && user.displayName ? user.displayName : ""}
           </span>
           <span className='profile__job_title'>
-            Fullstack Developer
+            {user && user.email ? user.email : ""}
           </span>
           <div className='span'></div>
           <div className='profile__view'>
