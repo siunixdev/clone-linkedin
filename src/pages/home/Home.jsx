@@ -14,14 +14,14 @@ const Home = () => {
   useEffect(() => {
     setUser(auth)
     !auth && navigate("/login")
-  }, [])
+  })
 
   return (
     <div className="app">
       <Header user={user} />
       <div className='app__body'>
         <Sidebar user={user} />
-        <Feed photoUrl={user.photoUrl} />
+        <Feed user={user} />
         <Widget />
       </div>
     </div>

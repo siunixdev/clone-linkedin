@@ -3,7 +3,7 @@ import {
 } from "../actions/constant"
 
 const INITIAL_STATE = {
-  user: undefined
+  user: null
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {

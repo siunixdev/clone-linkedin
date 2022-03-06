@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Header.sass'
 import Logo from './images/logo.svg'
 import IconSearch from './images/icon-search.svg'
 import HeaderOption from './HeaderOption'
 import Avatar from '../base/avatar/Avatar'
-import { useSelector } from 'react-redux'
+import { signOutAPI } from '../../actions'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 var menus = [
   {
@@ -49,7 +51,16 @@ var menus = [
   },
 ]
 
+
+
 const Header = ({ user }) => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [showMenu, setShowMenu] = useState(false)
+
+  const signOut = () => {
+    dispatch(signOutAPI())
+  }
 
   return (
     <div className='header'>
@@ -72,16 +83,32 @@ const Header = ({ user }) => {
               />
             ))
           }
-          <HeaderOption
-            title="Me"
-            icon={
-              <Avatar
-                height="h-6"
-                width="w-6"
-                avatar={user && user.photoUrl ? user.photoUrl : "/images/no-photo.png"}
+          <div className=''>
+            <div>
+              <HeaderOption
+                title="Me"
+                icon={
+                  <Avatar
+                    height="h-6"
+                    width="w-6"
+                    avatar={user && user.photoURL ? user.photoURL : "/images/no-photo.png"}
+                  />
+                }
+                onClick={() => setShowMenu(!showMenu)}
               />
+            </div>
+            {
+              showMenu && (
+                <button className='header__right__show-menu'
+                  onClick={() => {
+                    signOut()
+                    setShowMenu(false)
+                  }}>
+                  Logout
+                </button>
+              )
             }
-          />
+          </div>
         </div>
       </div>
     </div>

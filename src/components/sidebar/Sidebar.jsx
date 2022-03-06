@@ -15,7 +15,7 @@ const Sidebar = ({ user }) => {
           <Avatar
             height="h-20"
             width="w-20"
-            avatar={user && user.photoUrl ? user.photoUrl : "/images/no-photo.png"}
+            avatar={user && user.photoURL ? user.photoURL : "/images/no-photo.png"}
           />
           <span className='profile__name h'>
             {user && user.displayName ? user.displayName : ""}
